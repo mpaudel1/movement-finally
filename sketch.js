@@ -1,5 +1,7 @@
 var board = [];
 
+var player1Pos = [];
+
 function setup() {
   createCanvas(400,400);
 
@@ -32,4 +34,15 @@ function draw() {
   tank1.display();
 
   mage1.display();
+
+  if(assassin1.velocityX === 0) {
+    assassin1.restriction();
+  }
+}
+
+function mouseDragged() {
+  if(assassin1.x >= (mouseX - assassin1.radius) && assassin1.x <= (mouseX + assassin1.radius) && assassin1.y >= (mouseY - assassin1.radius) && assassin1.y <= (mouseY + assassin1.radius)) {
+    assassin1.x = mouseX;
+    assassin1.y = mouseY;
+  } 
 }
