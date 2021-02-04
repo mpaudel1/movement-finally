@@ -41,8 +41,17 @@ function draw() {
 }
 
 function mouseDragged() {
-  if(assassin1.x >= (mouseX - assassin1.radius) && assassin1.x <= (mouseX + assassin1.radius) && assassin1.y >= (mouseY - assassin1.radius) && assassin1.y <= (mouseY + assassin1.radius)) {
+  if(assassin1.x >= (mouseX - assassin1.radius) && assassin1.x <= (mouseX + assassin1.radius) 
+  && assassin1.y >= (mouseY - assassin1.radius) && assassin1.y <= (mouseY + assassin1.radius)) {
     assassin1.x = mouseX;
     assassin1.y = mouseY;
-  } 
+    for (var i = 0; i < board.length; i++) {
+      console.log(i);
+      if (board[i].x >= (mouseX - board[i].width/2) && board[i].x <= (mouseX + board[i].width/2) 
+      && board[i].y >= (mouseY - board[i].height/2) && board[i].y <= (mouseY + board[i].height/2)) {
+        board[i].color = rgb(245, 245, 245);
+        
+      }
+    } 
+  }
 }
