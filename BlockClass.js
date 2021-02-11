@@ -3,11 +3,12 @@ class BlockClass {
         this.x = x;
         this.y = y;
         this.side = 50;
-        this.color = rgb(255, 150, 143);
+        this.color = "green";
     }
     display() {
         rectMode(CENTER);
-        rect(this.x, this.y, this.side, this.side);
         fill(this.color);
+        rect(this.x, this.y, this.side, this.side);
+        
     }
 }
