@@ -28,11 +28,11 @@ function draw() {
 
   warrior1.display();
   if(mouseIsPressed){
-    assassin1.projection()
-    assassin2.projection()
+    tank1.projection()
+    assassin1.projection();
   }
   assassin1.display();
-  assassin2.display();
+
   tank1.display();
 
   mage1.display();
@@ -43,11 +43,13 @@ function draw() {
 }
 
 function mouseDragged() {
-  assassin1.movement()
-  assassin2.movement()
+  tank1.movement();
+
+  assassin1.movement();
 }
 
 function mouseReleased(){
+  tank1.restriction();
+
   assassin1.restriction();
-  assassin2.restriction();
 }
